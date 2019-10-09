@@ -1,5 +1,4 @@
 # vue-cource
-<<<<<<< HEAD
 vue学习
 =======
 
