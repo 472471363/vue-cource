@@ -1,5 +1,7 @@
 <template>
-    $END$
+    <div>
+      11111@qq.com
+    </div>
 </template>
 
 <script>

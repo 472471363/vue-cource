@@ -1,10 +1,22 @@
 <template>
   <div id="app">
     <div id="nav">
+<!--      router-link 实际封装了一个a标签-->
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+<!--      一下是使用命名路由示例开始-->
+      | <router-link :to="{ name:'home' }">Home2</router-link> |
+      <router-link :to="{ name:'about' }">About2</router-link>
+<!--      一下是使用命名路由示例结束-->
+
     </div>
+<!--    router-view 是渲染组件-->
     <router-view/>
+
+<!--    命名视图开始-->
+    <router-view name="email"/>
+    <router-view name="tel"/>
+<!--    命名视图结束-->
   </div>
 </template>
 

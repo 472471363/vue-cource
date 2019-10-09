@@ -1,13 +1,13 @@
 <template>
-    $END$
+    <div>
+      I am parent
+      <router-view/>
+    </div>
+
 </template>
 
 <script>
-  export default {
-    name: 'parent'
-  }
+export default {
+  //
+}
 </script>
-
-<style scoped>
-
-</style>
