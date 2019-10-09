@@ -23,6 +23,7 @@ export default [
     path: '/argue/:name',
     name: 'argue',
     // 布尔模式传参，主要是用在有动态路由参数当中
+    props: true,
     component: () => import('@/views/argue.vue')
   },
   {
