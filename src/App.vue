@@ -5,8 +5,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
 <!--      一下是使用命名路由示例开始-->
-      | <router-link :to="{ name:'home' }">Home2</router-link> |
-      <router-link :to="{ name:'about' }">About2</router-link>
+      <!--| <router-link :to="{ name:'home' }">Home2</router-link> |
+      <router-link :to="{ name:'about' }">About2</router-link>-->
 <!--      一下是使用命名路由示例结束-->
 
     </div>
