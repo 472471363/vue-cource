@@ -7,7 +7,12 @@ export default [
     name: 'home',
     // 别名也需要加"/"
     alias: '/home_page',
-    component: Home
+    component: Home,
+    // 函数模式路由传参，这是第三种传参模式,下面这种事es6的写法 意思事return 一个对象 等同于return {}
+    // 此函数的参数router 表示当前路由对象
+    props: router => ({
+      food: router.query.food
+    })
   },
   {
     path: '/about',
@@ -16,7 +21,11 @@ export default [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue'),
+    // 普通路由传参这是第二种类型——对象模式
+    props: {
+      food: 'banana'
+    }
   },
   {
     // 动态路由参数
@@ -72,6 +81,12 @@ export default [
       // }
     }
     // 方式3 传入函数 结束
-  }
+  },
   // 重定向结束
+  // 找不到路由规则直接跳转到统一页面，这个要放在最后，因为路由匹配规则是从上往下的匹配规则   开始
+  {
+    path: '*',
+    component: () => import('@/views/404_page.vue')
+  }
+  // 找不到路由规则直接跳转到统一页面   结束
 ]
