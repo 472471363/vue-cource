@@ -29,4 +29,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
->>>>>>> init
+
+## vuex
+```
+对于vuex 中state 如果是同步修改需要使用`store.commit` ，对于异步是通过action进行修改store.dispatch进行触发
+```
+

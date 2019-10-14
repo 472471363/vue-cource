@@ -4,6 +4,7 @@ import state from './state'
 import mutations from './mutations'
 import actions from './actions'
 import user from './module/user'
+import getters from './getters'
 
 import config from '../config'
 
@@ -13,6 +14,7 @@ export default new Vuex.Store({
   state,
   mutations,
   actions,
+  getters,
   modules: {
     user
   }

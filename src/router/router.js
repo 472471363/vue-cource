@@ -12,13 +12,13 @@ export default [
     // 此函数的参数router 表示当前路由对象
     props: router => ({
       food: router.query.food
-    }),
+    })
     // 路由独享守卫 特别注意一点要记得调用next(),如果不调用是不会继续往下流转的 开始
-    beforeEnter: (to, from, next) => {
-      if (from.name === 'about') alert('来自 about 页')
-      alert('不是来自about 页')
-      next()
-    }
+    // beforeEnter: (to, from, next) => {
+    //   if (from.name === 'about') alert('来自 about 页')
+    //   alert('不是来自about 页')
+    //   next()
+    // }
     // 路由独享守卫 结束
   },
   {
@@ -95,6 +95,11 @@ export default [
     // 方式3 传入函数 结束
   },
   // 重定向结束
+  {
+    path: '/store',
+    name: 'store',
+    component: () => import('@/views/store.vue')
+  },
   // 找不到路由规则直接跳转到统一页面，这个要放在最后，因为路由匹配规则是从上往下的匹配规则   开始
   {
     path: '*',

@@ -15,17 +15,17 @@ const router = new Router({
 
 const HAS_LOGIN = true
 
-router.beforeEach((to, from, next) => {
-  // 如果将要跳转的是登陆页面，那么判断它是否已经登陆，如果登陆直接进行跳转
-  if (to.name !== 'login') {
-    if (HAS_LOGIN) next()
-    // 如果没有登陆，则跳转到登陆页面
-    else next({ name: 'login' })
-  } else {
-    if (HAS_LOGIN) next({ name: 'home' })
-    next()
-  }
-})
+// router.beforeEach((to, from, next) => {
+//   // 如果将要跳转的是登陆页面，那么判断它是否已经登陆，如果登陆直接进行跳转
+//   if (to.name !== 'login') {
+//     if (HAS_LOGIN) next()
+//     // 如果没有登陆，则跳转到登陆页面
+//     else next({ name: 'login' })
+//   } else {
+//     if (HAS_LOGIN) next({ name: 'home' })
+//     next()
+//   }
+// })
 // 下面演示导航守卫 —— 全局守卫 结束
 
 // 后置钩子 开始
